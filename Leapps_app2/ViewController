@@ -12,9 +12,7 @@
 
 @end
 
-
 @implementation UIImage (scaleToSize)
-
 - (UIImage*)scaleToSize:(CGSize)size
 {
     UIGraphicsBeginImageContext(size);
@@ -36,29 +34,15 @@
 
 @implementation ViewController;
 
-@synthesize ApplicationView;
-@synthesize _tableView;
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSString *segueId = segue.identifier;
-    
-    if ([segueId isEqualToString:@"EmbedTable"])
-    {
-        _tableView = (MainMenuController *)[segue destinationViewController];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIButton* fakeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    fakeButton.frame = CGRectMake(0.0, 0.0, 32.0, 32.0);
-    [fakeButton setImage:[UIImage imageNamed:@"Settings.png"] forState:UIControlStateNormal];
+    UIImage* image = [UIImage imageNamed:@"Settings.png"];
+    image = [image scaleToSize: CGSizeMake(32, 32)];
+    UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:image];
+    [fakeButton addTarget:self action:@selector(multipleTap:withEvent:) forControlEvents:UIControlEventTouchDownRepeat];
     UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
     self.navigationItem.rightBarButtonItem = fakeButtonItem;
-    [fakeButton addTarget:self action:@selector(multipleTap:withEvent:) forControlEvents:UIControlEventTouchDown];
-
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -69,12 +53,11 @@
 }
 
 
--(void)multipleTap:(id)sender withEvent:(UIEvent *)event  {
+-(void)multipleTap:(id)sender withEvent:(UIEvent*)event {
     UITouch* touch = [[event allTouches] anyObject];
-    if (touch.tapCount == 2)
-            [_tableView settingsPressed];
+    if (touch.tapCount == 2) {
+        printf("TAMERE");
+    }
 }
 
 @end
-
-
