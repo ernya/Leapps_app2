@@ -11,6 +11,7 @@
 @interface MainMenuController : UITableViewController
 
 - (void) settingsPressed;
+- (void)viewDidAppear:(BOOL)animated;
 
 @property bool _isAdmin;
 @end

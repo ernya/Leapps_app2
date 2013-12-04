@@ -22,7 +22,7 @@
 		EF55A32C184C10AB002B1700 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF55A30E184C10AB002B1700 /* UIKit.framework */; };
 		EF55A334184C10AB002B1700 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF55A332184C10AB002B1700 /* InfoPlist.strings */; };
 		EF55A336184C10AB002B1700 /* Leapps_app2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF55A335184C10AB002B1700 /* Leapps_app2Tests.m */; };
-		EFD9AAFD184C3CB60067AD38 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD9AAFC184C3CB60067AD38 /* Settings.png */; };
+		EFB74E32184FD6D600F2C7F8 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB74E31184FD6D600F2C7F8 /* Settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		EF55A331184C10AB002B1700 /* Leapps_app2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Leapps_app2Tests-Info.plist"; sourceTree = "<group>"; };
 		EF55A333184C10AB002B1700 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EF55A335184C10AB002B1700 /* Leapps_app2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Leapps_app2Tests.m; sourceTree = "<group>"; };
-		EFD9AAFC184C3CB60067AD38 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		EFB74E31184FD6D600F2C7F8 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +117,9 @@
 		EF55A310184C10AB002B1700 /* Leapps_app2 */ = {
 			isa = PBXGroup;
 			children = (
+				EFB74E31184FD6D600F2C7F8 /* Settings.png */,
 				EF4CD90F184EA9F200D126B7 /* MainMenuController.h */,
 				EF4CD910184EA9F200D126B7 /* MainMenuController.m */,
-				EFD9AAFC184C3CB60067AD38 /* Settings.png */,
 				EF55A319184C10AB002B1700 /* AppDelegate.h */,
 				EF55A31A184C10AB002B1700 /* AppDelegate.m */,
 				EF55A31C184C10AB002B1700 /* Main.storyboard */,
@@ -236,7 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFD9AAFD184C3CB60067AD38 /* Settings.png in Resources */,
+				EFB74E32184FD6D600F2C7F8 /* Settings.png in Resources */,
 				EF55A323184C10AB002B1700 /* Images.xcassets in Resources */,
 				EF55A315184C10AB002B1700 /* InfoPlist.strings in Resources */,
 				EF55A31E184C10AB002B1700 /* Main.storyboard in Resources */,

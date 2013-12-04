@@ -25,6 +25,13 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    _isAdmin = true;
+    [super viewDidAppear:animated];
+    [self settingsPressed];
+}
+
 - (void)settingsPressed
 {
     _isAdmin = !_isAdmin;
