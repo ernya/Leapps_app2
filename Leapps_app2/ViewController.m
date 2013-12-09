@@ -36,18 +36,6 @@
 
 @implementation ViewController;
 
-@synthesize ApplicationView;
-@synthesize _tableView;
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSString *segueId = segue.identifier;
-    
-    if ([segueId isEqualToString:@"EmbedTable"])
-    {
-        _tableView = (MainMenuController *)[segue destinationViewController];
-    }
-}
 
 - (void)viewDidLoad
 {
@@ -58,7 +46,18 @@
     UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
     self.navigationItem.rightBarButtonItem = fakeButtonItem;
     [fakeButton addTarget:self action:@selector(multipleTap:withEvent:) forControlEvents:UIControlEventTouchDown];
+    UIImage *background = [UIImage imageNamed: @"blue_wallpaper.jpg"];
+    _button1.alpha = _button1.alpha == 1 ? 0 : 1;
+    _button1.userInteractionEnabled = !_button1.userInteractionEnabled;
+    _button2.alpha = _button2.alpha == 1 ? 0 : 1;
+    _button2.userInteractionEnabled = !_button2.userInteractionEnabled;
+    _button3.alpha = _button3.alpha == 1 ? 0 : 1;
+    _button3.userInteractionEnabled = !_button3.userInteractionEnabled;
+    _button4.alpha = _button4.alpha == 1 ? 0 : 1;
+    _button4.userInteractionEnabled = !_button4.userInteractionEnabled;
 
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:background];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -72,7 +71,16 @@
 -(void)multipleTap:(id)sender withEvent:(UIEvent *)event  {
     UITouch* touch = [[event allTouches] anyObject];
     if (touch.tapCount == 2)
-            [_tableView settingsPressed];
+    {
+        _button1.alpha = _button1.alpha == 1 ? 0 : 1;
+        _button1.userInteractionEnabled = !_button1.userInteractionEnabled;
+        _button2.alpha = _button2.alpha == 1 ? 0 : 1;
+        _button2.userInteractionEnabled = !_button2.userInteractionEnabled;
+        _button3.alpha = _button3.alpha == 1 ? 0 : 1;
+        _button3.userInteractionEnabled = !_button3.userInteractionEnabled;
+        _button4.alpha = _button4.alpha == 1 ? 0 : 1;
+        _button4.userInteractionEnabled = !_button4.userInteractionEnabled;
+    }
 }
 
 @end

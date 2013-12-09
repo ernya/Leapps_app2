@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainMenuController.h"
 
 @interface UIImage (scaleToSize)
 - (UIImage*)scaleToSize:(CGSize)size;
@@ -15,6 +14,8 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *ApplicationView;
-@property (weak, nonatomic) MainMenuController *_tableView;
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *button1;
+@property (weak, nonatomic) IBOutlet UIButton *button2;
+@property (weak, nonatomic) IBOutlet UIButton *button3;
+@property (weak, nonatomic) IBOutlet UIButton *button4;
 @end
