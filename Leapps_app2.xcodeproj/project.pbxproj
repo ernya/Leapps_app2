@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF4CD912184EA9F200D126B7 /* MainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4CD910184EA9F200D126B7 /* MainMenuController.m */; };
 		EF55A30B184C10AB002B1700 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF55A30A184C10AB002B1700 /* Foundation.framework */; };
 		EF55A30D184C10AB002B1700 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF55A30C184C10AB002B1700 /* CoreGraphics.framework */; };
 		EF55A30F184C10AB002B1700 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF55A30E184C10AB002B1700 /* UIKit.framework */; };
@@ -22,6 +21,13 @@
 		EF55A32C184C10AB002B1700 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF55A30E184C10AB002B1700 /* UIKit.framework */; };
 		EF55A334184C10AB002B1700 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF55A332184C10AB002B1700 /* InfoPlist.strings */; };
 		EF55A336184C10AB002B1700 /* Leapps_app2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF55A335184C10AB002B1700 /* Leapps_app2Tests.m */; };
+		EF5E3EB218565BE9003DD27C /* blue_wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF5E3EB118565BE9003DD27C /* blue_wallpaper.jpg */; };
+		EF5E3EB5185666E2003DD27C /* PartieRapideController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5E3EB4185666E2003DD27C /* PartieRapideController.m */; };
+		EF5E3EB818566DA8003DD27C /* PartiePersonnaliseeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5E3EB718566DA8003DD27C /* PartiePersonnaliseeController.m */; };
+		EF5E3EBB18566DEC003DD27C /* EditionModeleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5E3EBA18566DEC003DD27C /* EditionModeleController.m */; };
+		EF5E3EBE18566E10003DD27C /* ParametresController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5E3EBD18566E10003DD27C /* ParametresController.m */; };
+		EF5E3EC1185671DD003DD27C /* CreerModeleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5E3EC0185671DD003DD27C /* CreerModeleController.m */; };
+		EF5E3EC418567369003DD27C /* EditModelListController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5E3EC318567369003DD27C /* EditModelListController.m */; };
 		EFB74E32184FD6D600F2C7F8 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB74E31184FD6D600F2C7F8 /* Settings.png */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EF4CD90F184EA9F200D126B7 /* MainMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuController.h; path = ../MainMenuController.h; sourceTree = "<group>"; };
-		EF4CD910184EA9F200D126B7 /* MainMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuController.m; path = ../MainMenuController.m; sourceTree = "<group>"; };
 		EF55A307184C10AB002B1700 /* Leapps_app2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leapps_app2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF55A30A184C10AB002B1700 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EF55A30C184C10AB002B1700 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,6 +61,19 @@
 		EF55A331184C10AB002B1700 /* Leapps_app2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Leapps_app2Tests-Info.plist"; sourceTree = "<group>"; };
 		EF55A333184C10AB002B1700 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EF55A335184C10AB002B1700 /* Leapps_app2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Leapps_app2Tests.m; sourceTree = "<group>"; };
+		EF5E3EB118565BE9003DD27C /* blue_wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue_wallpaper.jpg; sourceTree = "<group>"; };
+		EF5E3EB3185666E2003DD27C /* PartieRapideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartieRapideController.h; sourceTree = "<group>"; };
+		EF5E3EB4185666E2003DD27C /* PartieRapideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartieRapideController.m; sourceTree = "<group>"; };
+		EF5E3EB618566DA8003DD27C /* PartiePersonnaliseeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartiePersonnaliseeController.h; sourceTree = "<group>"; };
+		EF5E3EB718566DA8003DD27C /* PartiePersonnaliseeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartiePersonnaliseeController.m; sourceTree = "<group>"; };
+		EF5E3EB918566DEC003DD27C /* EditionModeleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditionModeleController.h; path = ../EditionModeleController.h; sourceTree = "<group>"; };
+		EF5E3EBA18566DEC003DD27C /* EditionModeleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditionModeleController.m; path = ../EditionModeleController.m; sourceTree = "<group>"; };
+		EF5E3EBC18566E10003DD27C /* ParametresController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametresController.h; sourceTree = "<group>"; };
+		EF5E3EBD18566E10003DD27C /* ParametresController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametresController.m; sourceTree = "<group>"; };
+		EF5E3EBF185671DD003DD27C /* CreerModeleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreerModeleController.h; sourceTree = "<group>"; };
+		EF5E3EC0185671DD003DD27C /* CreerModeleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreerModeleController.m; sourceTree = "<group>"; };
+		EF5E3EC218567369003DD27C /* EditModelListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditModelListController.h; sourceTree = "<group>"; };
+		EF5E3EC318567369003DD27C /* EditModelListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditModelListController.m; sourceTree = "<group>"; };
 		EFB74E31184FD6D600F2C7F8 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,9 +134,10 @@
 		EF55A310184C10AB002B1700 /* Leapps_app2 */ = {
 			isa = PBXGroup;
 			children = (
+				EF5E3EB918566DEC003DD27C /* EditionModeleController.h */,
+				EF5E3EBA18566DEC003DD27C /* EditionModeleController.m */,
+				EF5E3EB118565BE9003DD27C /* blue_wallpaper.jpg */,
 				EFB74E31184FD6D600F2C7F8 /* Settings.png */,
-				EF4CD90F184EA9F200D126B7 /* MainMenuController.h */,
-				EF4CD910184EA9F200D126B7 /* MainMenuController.m */,
 				EF55A319184C10AB002B1700 /* AppDelegate.h */,
 				EF55A31A184C10AB002B1700 /* AppDelegate.m */,
 				EF55A31C184C10AB002B1700 /* Main.storyboard */,
@@ -127,6 +145,16 @@
 				EF55A320184C10AB002B1700 /* ViewController.m */,
 				EF55A322184C10AB002B1700 /* Images.xcassets */,
 				EF55A311184C10AB002B1700 /* Supporting Files */,
+				EF5E3EB3185666E2003DD27C /* PartieRapideController.h */,
+				EF5E3EB4185666E2003DD27C /* PartieRapideController.m */,
+				EF5E3EB618566DA8003DD27C /* PartiePersonnaliseeController.h */,
+				EF5E3EB718566DA8003DD27C /* PartiePersonnaliseeController.m */,
+				EF5E3EBC18566E10003DD27C /* ParametresController.h */,
+				EF5E3EBD18566E10003DD27C /* ParametresController.m */,
+				EF5E3EBF185671DD003DD27C /* CreerModeleController.h */,
+				EF5E3EC0185671DD003DD27C /* CreerModeleController.m */,
+				EF5E3EC218567369003DD27C /* EditModelListController.h */,
+				EF5E3EC318567369003DD27C /* EditModelListController.m */,
 			);
 			path = Leapps_app2;
 			sourceTree = "<group>";
@@ -236,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5E3EB218565BE9003DD27C /* blue_wallpaper.jpg in Resources */,
 				EFB74E32184FD6D600F2C7F8 /* Settings.png in Resources */,
 				EF55A323184C10AB002B1700 /* Images.xcassets in Resources */,
 				EF55A315184C10AB002B1700 /* InfoPlist.strings in Resources */,
@@ -259,9 +288,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF55A321184C10AB002B1700 /* ViewController.m in Sources */,
-				EF4CD912184EA9F200D126B7 /* MainMenuController.m in Sources */,
+				EF5E3EB5185666E2003DD27C /* PartieRapideController.m in Sources */,
 				EF55A31B184C10AB002B1700 /* AppDelegate.m in Sources */,
+				EF5E3EBE18566E10003DD27C /* ParametresController.m in Sources */,
 				EF55A317184C10AB002B1700 /* main.m in Sources */,
+				EF5E3EC1185671DD003DD27C /* CreerModeleController.m in Sources */,
+				EF5E3EBB18566DEC003DD27C /* EditionModeleController.m in Sources */,
+				EF5E3EB818566DA8003DD27C /* PartiePersonnaliseeController.m in Sources */,
+				EF5E3EC418567369003DD27C /* EditModelListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
