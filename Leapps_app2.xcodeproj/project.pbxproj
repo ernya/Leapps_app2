@@ -143,8 +143,6 @@
 				EF55A31C184C10AB002B1700 /* Main.storyboard */,
 				EF55A31F184C10AB002B1700 /* ViewController.h */,
 				EF55A320184C10AB002B1700 /* ViewController.m */,
-				EF55A322184C10AB002B1700 /* Images.xcassets */,
-				EF55A311184C10AB002B1700 /* Supporting Files */,
 				EF5E3EB3185666E2003DD27C /* PartieRapideController.h */,
 				EF5E3EB4185666E2003DD27C /* PartieRapideController.m */,
 				EF5E3EB618566DA8003DD27C /* PartiePersonnaliseeController.h */,
@@ -155,6 +153,8 @@
 				EF5E3EC0185671DD003DD27C /* CreerModeleController.m */,
 				EF5E3EC218567369003DD27C /* EditModelListController.h */,
 				EF5E3EC318567369003DD27C /* EditModelListController.m */,
+				EF55A322184C10AB002B1700 /* Images.xcassets */,
+				EF55A311184C10AB002B1700 /* Supporting Files */,
 			);
 			path = Leapps_app2;
 			sourceTree = "<group>";
