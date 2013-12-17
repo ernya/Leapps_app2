@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreerModeleController : UIViewController
+@interface UIImagePickerController(shouldAutoRotate)
+-(bool) shouldAutorotate;
+@end
 
+@interface CreerModeleController : UIViewController
+- (IBAction)savePressed: (UIButton *) sender;
+- (IBAction)pickImage:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *_name;
+@property (weak, nonatomic) IBOutlet UIImageView *_imageView;
+@property (strong, nonatomic) NSMutableArray *_points;
 @end

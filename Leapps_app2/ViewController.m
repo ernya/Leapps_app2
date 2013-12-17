@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PointParPoint.h"
 
 @interface ViewController ()
 
@@ -40,6 +41,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    PointParPoint *game = [[PointParPoint alloc] init];
     UIButton* fakeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     fakeButton.frame = CGRectMake(0.0, 0.0, 32.0, 32.0);
     [fakeButton setImage:[UIImage imageNamed:@"Settings.png"] forState:UIControlStateNormal];

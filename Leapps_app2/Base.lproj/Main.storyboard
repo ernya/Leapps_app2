@@ -343,6 +343,9 @@
                                 <state key="normal" title="Importer une image de fond">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickImage:" destination="y9X-ce-rcY" eventType="touchUpInside" id="svM-Bw-HDI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMM-Rs-2Gn">
                                 <rect key="frame" x="311" y="220" width="403" height="32"/>
@@ -352,6 +355,9 @@
                                 <state key="normal" title="Placer les points">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mpy-kh-LNz" kind="push" identifier="PointsEditing" id="wNl-xl-xia"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYH-bO-jdi">
                                 <rect key="frame" x="311" y="691" width="403" height="32"/>
@@ -361,6 +367,9 @@
                                 <state key="normal" title="Sauvegarder">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="y9X-ce-rcY" eventType="touchUpInside" id="2Cc-vK-n3B"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4mv-LJ-Lfc">
                                 <rect key="frame" x="247" y="271" width="530" height="397"/>
@@ -370,8 +379,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Créer un modèle" id="iBH-Yn-3cO"/>
+                    <navigationItem key="navigationItem" title="Créer un modèle" id="iBH-Yn-3cO">
+                        <barButtonItem key="backBarButtonItem" title="Terminé" id="0EA-a4-0qx"/>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="_imageView" destination="4mv-LJ-Lfc" id="0PU-3f-g7Q"/>
+                        <outlet property="_name" destination="XY1-eU-o3B" id="sRW-Us-wSY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Koj-xo-jWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,6 +418,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psz-6z-27h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2605" y="840"/>
+        </scene>
+        <!--Edit Points View Controller - Ajouter des points-->
+        <scene sceneID="cJF-KC-8oq">
+            <objects>
+                <viewController id="mpy-kh-LNz" customClass="EditPointsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iEV-9Q-Pws"/>
+                        <viewControllerLayoutGuide type="bottom" id="YsX-QJ-ibr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QO4-VO-ru0">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3gG-zR-hd4">
+                                <rect key="frame" x="0.0" y="63" width="1024" height="705"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ajouter des points" id="O31-bb-98U"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="_image" destination="3gG-zR-hd4" id="A57-Q2-i8A"/>
+                        <outlet property="view" destination="3gG-zR-hd4" id="aWs-V9-FmC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5d-Jq-LBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3887" y="-46"/>
         </scene>
         <!--View Controller - Modifier un modèle-->
         <scene sceneID="w5v-B5-iuC">
@@ -575,6 +622,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iZd-Pj-SIC"/>
+        <segue reference="Xct-5z-KV3"/>
     </inferredMetricsTieBreakers>
 </document>

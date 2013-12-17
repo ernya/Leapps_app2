@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Alexandre ERNY. All rights reserved.
 //
 
+#import "EditPointsViewController.h"
 #import "EditionModeleController.h"
 
 @interface EditionModeleController ()
@@ -35,6 +36,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)pickImage:(UIButton *)sender
+{
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.editing = YES;
+    imagePickerController.delegate = (id)self;
+    
+    [self  presentViewController:imagePickerController animated:NO completion:nil];
 }
 
 @end
