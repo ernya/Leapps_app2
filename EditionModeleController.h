@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface EditionModeleController : UIViewController
-
+- (IBAction)savePressed: (UIButton *) sender;
 - (IBAction)pickImage:(UIButton *)sender;
-
+@property (weak, nonatomic) IBOutlet UILabel *_name;
+@property (weak, nonatomic) IBOutlet UIImageView *_imageView;
+@property (strong, nonatomic) NSMutableArray *_points;
 @end
