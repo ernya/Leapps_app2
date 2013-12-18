@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="7LK-dH-YAH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="7LK-dH-YAH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -418,10 +418,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Sélectionner un modèle à modifier" id="NIx-lz-2g8"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="bVa-fQ-Td7" kind="push" identifier="editModel" id="HEh-2R-hAn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00L-QH-ey3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2605" y="840"/>
+            <point key="canvasLocation" x="2628" y="840"/>
         </scene>
         <!--Edit Points View Controller - Ajouter des points-->
         <scene sceneID="cJF-KC-8oq">
@@ -488,7 +491,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mpy-kh-LNz" kind="push" id="B1U-TQ-IDU"/>
+                                    <segue destination="mpy-kh-LNz" kind="push" identifier="PointsEditing" id="B1U-TQ-IDU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAz-eB-gQD">
@@ -526,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGC-Yf-53q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3711" y="840"/>
+            <point key="canvasLocation" x="3730" y="840"/>
         </scene>
         <!--Parametres Controller - Paramètres-->
         <scene sceneID="aVL-rC-Ms0">

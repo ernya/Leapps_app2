@@ -8,6 +8,7 @@
 
 #import "ThreeModelCell.h"
 #import "EditModelListController.h"
+#import "EditionModeleController.h"
 
 @interface EditModelListController ()
 
@@ -15,7 +16,7 @@
 
 @implementation EditModelListController
 
-@synthesize modelList;
+@synthesize modelList, modelselected;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,11 +65,29 @@
     return 200;
 }
 
-- (void) callback:(Model *) model
-{
-    NSLog([model.data objectForKey:@"Name"]);
+-(void)viewWillAppear:(BOOL)animated{
+    [self.tableView reloadData];
 }
 
+- (void) callback:(Model *) model
+{
+    modelselected = model;
+    [self performSegueWithIdentifier:@"editModel" sender:self];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"editModel"])
+    {
+        EditionModeleController *controller = [segue destinationViewController];
+        [controller setModel:modelselected];	
+    }
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self.view setNeedsDisplay];
+}
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";

@@ -18,6 +18,7 @@
 @synthesize  _image, _imageSource, _points, _finalpoints;
 
 -(void) viewWillDisappear:(BOOL)animated {
+    [_finalpoints removeAllObjects];
     for(NSValue *aKey in _points)
     {
         [_finalpoints addObject:[_points objectForKey:aKey]];
@@ -40,6 +41,21 @@
     _image.image = _imageSource;
 _points = [[NSMutableDictionary alloc] init];
 	// Do any additional setup after loading the view.
+    for (NSValue *aKey in _finalpoints)
+    {
+        CGPoint touch_point = [aKey CGPointValue];
+        UIView *touchView = [[UIView alloc] init];
+        [touchView setBackgroundColor:[UIColor redColor]];
+        touchView.frame = CGRectMake(touch_point.x + _image.frame.origin.x - 15, touch_point.y + _image.frame.origin.y - 15, 30, 30);
+        touchView.layer.cornerRadius = 15;
+        [self.view addSubview:touchView];
+        [_points setObject:aKey forKey:[NSValue valueWithNonretainedObject:touchView]];
+    }
+    
+}
+- (void)setPoints: (NSMutableArray *) points
+{
+    _finalpoints = points;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

@@ -16,12 +16,17 @@
 @end
 
 @implementation EditionModeleController
-@synthesize _name, _imageView, _points;
+@synthesize _name, _imageView, _points, _model;
 - (NSUInteger) supportedInterfaceOrientations
 {
     //Because your app is only landscape, your view controller for the view in your
     // popover needs to support only landscape
     return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (void) setModel:(Model *)model
+{
+    _model = model;
 }
 
 - (IBAction)savePressed:(UIButton *)sender
@@ -38,8 +43,8 @@
     }
     else
     {
-        Model *model = [[Model alloc] initWithName: [_name text] Image: _imageView.image Points: _points];
-        /* TODO : Save model to Game Object + Save Image in singleton */
+        _model.backgroundImage = _imageView.image;
+        _model.points = _points;
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
@@ -99,8 +104,15 @@
     _points = [[NSMutableArray alloc] init];
     UIImage *background = [UIImage imageNamed: @"blue_wallpaper.jpg"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:background];
+    _points = _model.points;
+    if (_points == NULL)
+        _points = [[NSMutableArray alloc] init];
+    _name.text = [_model.data objectForKey:@"Name"];
+    _imageView.image = _model.backgroundImage;
 	// Do any additional setup after loading the view.
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

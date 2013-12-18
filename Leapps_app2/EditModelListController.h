@@ -11,5 +11,6 @@
 @interface EditModelListController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *modelList;
+@property (weak, nonatomic) Model *modelselected;
 
 @end
