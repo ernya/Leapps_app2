@@ -36,8 +36,7 @@
 
 - (IBAction)savePressed:(UIButton *)sender
 {
-    NSMutableArray *temp = [[NSMutableArray alloc] init];
-    Model *model = [[Model alloc] initWithName: [_name text] Image: _imageView.image Points: temp];
+    Model *model = [[Model alloc] initWithName: [_name text] Image: _imageView.image Points: _points];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
