@@ -33,6 +33,7 @@
 		EF880B841860CA1700CD777F /* PointPos.m in Sources */ = {isa = PBXBuildFile; fileRef = EF880B831860CA1700CD777F /* PointPos.m */; };
 		EFABEA221860E16A00F6E3B8 /* EditPointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFABEA211860E16A00F6E3B8 /* EditPointsViewController.m */; };
 		EFB74E32184FD6D600F2C7F8 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB74E31184FD6D600F2C7F8 /* Settings.png */; };
+		EFFC0E7218623DDD0098F93B /* ThreeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFC0E7118623DDD0098F93B /* ThreeModelCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		EFABEA201860E16A00F6E3B8 /* EditPointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPointsViewController.h; sourceTree = "<group>"; };
 		EFABEA211860E16A00F6E3B8 /* EditPointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPointsViewController.m; sourceTree = "<group>"; };
 		EFB74E31184FD6D600F2C7F8 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		EFFC0E7018623DDD0098F93B /* ThreeModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeModelCell.h; sourceTree = "<group>"; };
+		EFFC0E7118623DDD0098F93B /* ThreeModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeModelCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,7 @@
 		EF55A310184C10AB002B1700 /* Leapps_app2 */ = {
 			isa = PBXGroup;
 			children = (
+				EFFC0E6F18623DB10098F93B /* View */,
 				EF880B7E1860C75C00CD777F /* Model */,
 				EF880B7D1860C75400CD777F /* Controller */,
 				EF5E3EB118565BE9003DD27C /* blue_wallpaper.jpg */,
@@ -222,6 +226,15 @@
 				EF880B831860CA1700CD777F /* PointPos.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EFFC0E6F18623DB10098F93B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFFC0E7018623DDD0098F93B /* ThreeModelCell.h */,
+				EFFC0E7118623DDD0098F93B /* ThreeModelCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +340,7 @@
 				EF880B811860C97900CD777F /* Model.m in Sources */,
 				EF55A321184C10AB002B1700 /* ViewController.m in Sources */,
 				EF5E3EB5185666E2003DD27C /* PartieRapideController.m in Sources */,
+				EFFC0E7218623DDD0098F93B /* ThreeModelCell.m in Sources */,
 				EF55A31B184C10AB002B1700 /* AppDelegate.m in Sources */,
 				EFABEA221860E16A00F6E3B8 /* EditPointsViewController.m in Sources */,
 				EF5E3EBE18566E10003DD27C /* ParametresController.m in Sources */,

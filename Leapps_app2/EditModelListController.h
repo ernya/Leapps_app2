@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditModelListController : UIViewController
+@interface EditModelListController : UITableViewController
+
+@property (strong, nonatomic) NSMutableArray *modelList;
 
 @end

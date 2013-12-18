@@ -36,7 +36,27 @@
 
 - (IBAction)savePressed:(UIButton *)sender
 {
-    Model *model = [[Model alloc] initWithName: [_name text] Image: _imageView.image Points: _points];
+    if ([_name.text isEqualToString:@""])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Veuillez spécifier un nom de modèle pour le créer" delegate:self cancelButtonTitle:@"C'est d'accord" otherButtonTitles:nil];
+        [alert show];
+    }
+    else if (_imageView.image == NULL)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Veuillez spécifier une image de fond pour créer le modèle" delegate:self cancelButtonTitle:@"C'est d'accord" otherButtonTitles:nil];
+        [alert show];
+    }
+    else if (_points.count == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Veuillez spécifier au moins un point a relier" delegate:self cancelButtonTitle:@"C'est d'accord" otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+        Model *model = [[Model alloc] initWithName: [_name text] Image: _imageView.image Points: _points];
+        /* TODO : Save model to Game Object + Save Image in singleton */
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
