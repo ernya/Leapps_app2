@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Alexandre ERNY. All rights reserved.
 //
 
+#import "ThreeModelCell.h"
 #import "EditModelListController.h"
 
 @interface EditModelListController ()
@@ -30,13 +31,17 @@
 {
     [super viewDidLoad];
     modelList = [[NSMutableArray alloc] init];
-    [modelList addObject:@"toto"];
-    [modelList addObject:@"toto"];
-    [modelList addObject:@"toto"];
-    [modelList addObject:@"toto"];
-    [modelList addObject:@"toto"];
-    [modelList addObject:@"toto"];
-    [modelList addObject:@"toto"];
+    Model *model = [[Model alloc] initWithName:@"Maison" Image:NULL Points:NULL];
+    Model *model2 = [[Model alloc] initWithName:@"Voiture" Image:NULL Points:NULL];
+    Model *model3 = [[Model alloc] initWithName:@"Chat" Image:NULL Points:NULL];
+    [modelList addObject:model];
+    [modelList addObject:model2];
+    [modelList addObject:model3];
+    [modelList addObject:model];
+    [modelList addObject:model2];
+    [modelList addObject:model3];
+    [modelList addObject:model];
+    [modelList addObject:model2];
     UIImage *background = [UIImage imageNamed: @"blue_wallpaper.jpg"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:background];
 	// Do any additional setup after loading the view.
@@ -54,22 +59,32 @@
     return [modelList count] / 3 + ([modelList count] % 3 > 0 ? 1 : 0);
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
+}
+
+- (void) callback:(Model *) model
+{
+    NSLog([model.data objectForKey:@"Name"]);
+}
+
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ThreeModelCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[ThreeModelCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier width:[tableView rectForRowAtIndexPath:indexPath].size.width height:[tableView rectForRowAtIndexPath:indexPath].size.height callback:@selector(callback:) handler:self];
     }
     
     // Set the data for this cell:
     
-    cell.textLabel.text = @"Toto";
-    cell.detailTextLabel.text = @"More text";
-    
-    // set the accessory view:
-    cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
+    [cell setFirstModel:[modelList objectAtIndex:indexPath.row * 3]];
+    if (modelList.count > indexPath.row * 3 + 1)
+    [cell setSecondModel:[modelList objectAtIndex:indexPath.row * 3 + 1]];
+    if (modelList.count > indexPath.row * 3 + 2)
+    [cell setThirdModel:[modelList objectAtIndex:indexPath.row * 3 + 2]];
     
     return cell;
 }

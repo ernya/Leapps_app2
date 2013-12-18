@@ -7,18 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Model.h"
 
 @interface ThreeModelCell : UITableViewCell
-- (void) setFirstModel: (NSString *) name withImage: (UIImage *) image;
-- (void) setSecondModel: (NSString *) name withImage: (UIImage *) image;
-- (void) setThirdModel: (NSString *) name withImage: (UIImage *) image;
 
-@property (weak, nonatomic) UIImage *_firstImage;
-@property (weak, nonatomic) NSString *_firstName;
-@property (weak, nonatomic) UIImage *_secondImage;
-@property (weak, nonatomic) NSString *_secondName;
-@property (weak, nonatomic) UIImage *_thirdImage;
-@property (weak, nonatomic) NSString *_thirdName;
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier width: (CGFloat)width2 height: (CGFloat)height2 callback:(SEL) selector handler:(id) handler;
+
+- (void) setFirstModel: (Model *) model;
+- (void) setSecondModel: (Model *) model;
+- (void) setThirdModel: (Model *) model;
+
+@property (nonatomic) SEL _callback;
+@property (weak, nonatomic) id _handler;
+
+@property (weak, nonatomic) Model *_model1;
+@property (weak, nonatomic) Model *_model2;
+@property (weak, nonatomic) Model *_model3;
 
 @property (strong, nonatomic) UIImageView *_imageView1;
 @property (strong, nonatomic) UIImageView *_imageView2;
